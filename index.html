@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Turnering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Quiz Turnering</h1>
+
+    <!-- Skjema for å legge inn navn og lagnavn -->
+    <section id="registrering">
+        <h2>Registrer deg</h2>
+        <form id="teamForm">
+            <label for="navn">Navn:</label>
+            <input type="text" id="navn" required>
+            <label for="lagnavn">Lagnavn:</label>
+            <input type="text" id="lagnavn" required>
+            <button type="submit">Send inn</button>
+        </form>
+    </section>
+
+    <!-- Ledertavle -->
+    <section id="ledertavle">
+        <h2>Ledertavle</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Lagnavn</th>
+                    <th>Poeng</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboardBody"></tbody>
+        </table>
+    </section>
+
+    <!-- Admin-seksjon (skjult for vanlige brukere) -->
+    <section id="admin" style="display: none;">
+        <h2>Admin: Oppdater poeng</h2>
+        <input type="text" id="adminPass" placeholder="Passord">
+        <button onclick="loginAdmin()">Logg inn</button>
+        <div id="adminControls" style="display: none;">
+            <input type="text" id="teamToUpdate" placeholder="Lagnavn">
+            <input type="number" id="points" placeholder="Poeng">
+            <button onclick="updatePoints()">Oppdater</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
