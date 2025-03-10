@@ -33,8 +33,8 @@ function updateLeaderboard() {
 
 // Admin-login
 function loginAdmin() {
-    const pass = document.getElementById('adminPass').value;
-    if (pass === 'ditt-passord-her') { // Bytt ut med et sikkert passord
+    const pass = document.getElementById('Admin').value;
+    if (pass === '4259') { // Bytt ut med et sikkert passord
         document.getElementById('admin').style.display = 'block';
         document.getElementById('adminControls').style.display = 'block';
     } else {
